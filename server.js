@@ -16,7 +16,7 @@ app.use(cors({
 }));
 
 
-const uri = 'mongodb://127.0.0.1:27017';
+const uri = "mongodb+srv://yashwantbhole:yashwant@cluster0.bgdsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const dbName = 'notes-app';
 const collectionName = 'notes-app-users';
 let client;
