@@ -7,7 +7,7 @@ app.use(express.json());
 
 const allowedOrigins = [
   'http://localhost:5173', // Local Vite dev server
-  'https://notezen.netlify.app/' //netlify URL
+  'https://notezen.netlify.app' //netlify URL
 ];
 
 app.use(cors({
