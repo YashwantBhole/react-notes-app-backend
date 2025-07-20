@@ -4,7 +4,17 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const allowedOrigins = [
+  'http://localhost:5173', // Local Vite dev server
+  'https://notezen.netlify.app/' //netlify URL
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true // Only if you're using cookies or auth tokens in headers
+}));
+
 
 const uri = 'mongodb://127.0.0.1:27017';
 const dbName = 'notes-app';
