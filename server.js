@@ -199,7 +199,7 @@ app.put('/api/notes/:id', async (req, res) => {
         $set: {
           title,
           note,
-          date: new Date().toLocaleString() // Optional: update timestamp
+          date: new Date().toISOString(),
         }
       }
     );
